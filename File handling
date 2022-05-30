@@ -1,0 +1,43 @@
+1.Write a Python program to read an entire text file.
+
+txt = open('demo.txt','r')
+print(txt.read())
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2.Write a Python program to read first line of a file.
+
+f = open("test.txt", 'r')
+variable = f.readline(1)
+print(variable)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3.Write a Python program to append text to a file and display the text.
+
+file1 = open("demo.txt", "a")
+file1.write("Today \n")
+file1.close()
+   
+file1 = open("myfile.txt", "r")
+print("Output of Readlines after appending")
+print(file1.read())
+print()
+file1.close()
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4.Write a Python program to read last n lines of a file.
+
+f=open('demo.txt','r')
+l=f.readlines()
+c=len(l)
+n=int(input('no of lines'))
+for i in range(c-1,c-n-1,-1):
+  print(l[i])
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5.Write a python program to find the longest words
+
+fin = open("name.txt","r")
+str = fin.read()
+words = str.split()
+max_len = len(max(words, key=len))
+for word in words:
+    if len(word)==max_len:
+        longest_word =word         
+print(longest_word)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
